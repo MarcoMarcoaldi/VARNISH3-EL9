@@ -31,6 +31,9 @@ cd /path/to/downloaded/rpms/
 dnf install ./varnish*.rpm
 ```
 
+<img width="1908" height="1087" alt="image" src="https://github.com/user-attachments/assets/7d340aba-c44c-4d61-985c-7b115c626756" />
+
+
 Then enable and start the service (SysV init scripts, handled transparently by systemd via `systemd-sysv-generator`):
 
 ```bash
@@ -39,6 +42,9 @@ curl -I http://localhost:6081/
 ```
 
 Configuration lives where it always did on el7: `/etc/varnish/default.vcl` and `/etc/sysconfig/varnish`.
+
+<img width="1919" height="1149" alt="image" src="https://github.com/user-attachments/assets/26ee6fc5-bffc-4f1d-a404-c38b0b3ac2f1" />
+
 
 ## Package changelog (what was changed and why)
 
@@ -71,6 +77,8 @@ rpmbuild -ba ~/rpmbuild/SPECS/varnish.spec
 ```
 
 RPMs land in `~/rpmbuild/RPMS/x86_64/`, the rebuilt source RPM in `~/rpmbuild/SRPMS/`.
+
+
 
 ## Known limitations
 
